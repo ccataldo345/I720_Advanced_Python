@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
 import json
 
@@ -86,3 +86,17 @@ for i in range(len(list) -1):
 		
 print ("Max decrease: ", round(max_change_decrease_value, 2), "%, on date: ", datetime.fromtimestamp(max_change_decrease_date))
 print ()
+
+
+# print last date of values (yesterday date)
+def get_last_value_date():
+	last_date = datetime.fromtimestamp(list[len(list)-1][1])
+	last_date = last_date.strftime('%Y-%m-%d')
+	return last_date
+
+
+# print(get_last_value_date())
+today = datetime.now()
+yesterday = (today - timedelta(1)).strftime('%Y-%m-%d')
+print ("Yesterday date: ", yesterday, ", last value date: ", get_last_value_date())
+

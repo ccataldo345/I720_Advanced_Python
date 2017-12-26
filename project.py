@@ -52,7 +52,7 @@ max_list = max(list)
 max_list_value = max_list[0]
 max_list_date = max_list[1]
 print ()
-print ("Max value USD: ", max_list_value, " on date: ", datetime.fromtimestamp(max_list_date))
+print ("Max value USD: ", max_list_value, ", on date: ", datetime.fromtimestamp(max_list_date))
 print ()
 
 
